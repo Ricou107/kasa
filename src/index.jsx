@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Outlet, Route } from 'react-router-dom'
 import './index.css';
 import Home from './Pages/Home/Home';
-import Banner from './Components/Banner';
+import Banner from './Components/Banner/Banner';
 import Footer from './Components/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Error from './Pages/Error/Error';
@@ -11,27 +11,34 @@ import Accommodation from './Pages/Accommodation/Accommodation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-    errorElement: <Error />,
-  },
-    {
-    path: "about-us",
-    element: <AboutUs />,
-  },
-    {
-    path: "accommodation/:id",
-    element: <Accommodation />,
-  }
-]);
+const AppLayout = () => (
+  <>
+    <Banner />
+    <Outlet />
+    <Footer />
+  </>
+);
+
+const ErrorLayout = () => (
+  <>
+    <Banner />
+    <Error />
+    <Footer />
+  </>
+);
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<AppLayout />} errorElement={<ErrorLayout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/accommodation/:id" element={<Accommodation />} />
+    </Route>
+  ));
 
 root.render(
   <React.StrictMode>
-      <Banner />
       <RouterProvider router={router} />
-      <Footer />
   </React.StrictMode>
 );
 
