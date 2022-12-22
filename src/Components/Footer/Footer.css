@@ -1,0 +1,14 @@
+.footer {
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 122px;
+}

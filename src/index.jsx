@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter, createRoutesFromElements, Outlet, 
 import './index.css';
 import Home from './Pages/Home/Home';
 import Banner from './Components/Banner/Banner';
-import Footer from './Components/Footer';
+import Footer from './Components/Footer/Footer';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Error from './Pages/Error/Error';
 import Accommodation from './Pages/Accommodation/Accommodation';
