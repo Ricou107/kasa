@@ -1,0 +1,23 @@
+.accommodation-card {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    margin-bottom: 20px;
+}
+
+.accommodation-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(80%);
+}
+
+.accommodation-card p {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 18px;
+}

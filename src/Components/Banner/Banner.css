@@ -1,38 +1,35 @@
+.banner-img {
+  width: 100%;
+  border-radius: 25px;
+  filter: brightness(70%);
+  min-height: 111px;
+  object-fit: cover;
+}
+
 .banner {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 20px;
-}
-
-.banner-logo {
-    max-width: 45%;
-}
-
-.banner-navbar {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.banner-navbar li:not(:first-child) {
-    margin-left: 30px;
-}
-
-.banner a {
-  color: #FF6060;
-  font-family: 'Montserrat';
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat";
   font-weight: 500;
 }
 
-.active {
-  text-decoration: underline;
+.banner p {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0%, -50%);
+  margin: 0;
+  font-size: 25px;
+  text-align: left;
 }
 
-.no-active {
-  text-decoration: none;
+@media only screen and (min-width: 800px) {
+  .banner p {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    text-align: center;
+  }
 }

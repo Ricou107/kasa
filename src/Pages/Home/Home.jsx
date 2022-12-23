@@ -1,21 +1,13 @@
 import './Home.css';
+import Banner from '../../Components/Banner/Banner';
+import img from '../../Assets/home.png'
+import HomepageList from '../../Components/HomepageList/HomepageList';
 
 function Home() {
   return (
-    <div className="Home">
-      <header className="Home-header">
-        <p>
-          Edit <code>src/Home.js</code> and save to reload.
-        </p>
-        <a
-          className="Home-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+      <Banner img={img} text={'Chez vous, partout et ailleurs'}/>
+      <HomepageList />
     </div>
   );
 }
