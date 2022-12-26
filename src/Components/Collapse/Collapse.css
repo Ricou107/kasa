@@ -1,0 +1,32 @@
+.title {
+    background-color: #FF6060;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.collapse {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .collapse {
+        width: 80%;
+    }
+}
+
+.text {
+    background-color: #F7F7F7;
+    color: #FF6060;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    padding: 7px;
+    padding-top: 14px;
+    display: none;
+}
+
+.collapseOpen {
+    display: block;
+}

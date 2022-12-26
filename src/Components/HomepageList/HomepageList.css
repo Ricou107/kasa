@@ -8,3 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.homepage-list a {
+    margin: 0;
+}
