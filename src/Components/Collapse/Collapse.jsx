@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import dropdownArrow from '../../Assets/dropdownArrow.svg';
 import './Collapse.css';
 
 function Collapse({title, text}) {
     const [isOpen, updateOpen] = useState(false)
 
+	console.log(text.length, typeof(text), text)
 
 	return <section className='collapse'>
 		<div className="title" onClick={() => updateOpen(!isOpen)}>{title}</div>
-        <div className={`text${isOpen ? " collapseOpen" : ""}`}>{text}</div>
+		<img src={dropdownArrow} alt='dropdownArrow' className={`dropdownArrow${isOpen ? " collapseOpen" : ""}`} onClick={() => updateOpen(!isOpen)}/>
+        <div className={`text${isOpen ? " collapseOpen" : ""}`}>
+			{typeof(text) === 'string' ? text : text.map((equipment) => <p>{equipment}</p>)}
+		</div>
 	</section>
 }
 

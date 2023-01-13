@@ -1,4 +1,4 @@
-.title {
+.collapse .title {
     background-color: #FF6060;
     color: white;
     font-family: 'Montserrat';
@@ -9,10 +9,11 @@
 
 .collapse {
     width: 100%;
+    position: relative;
 }
 
 @media only screen and (min-width: 600px) {
-    .collapse {
+    .about-us .collapse {
         width: 80%;
     }
 }
@@ -29,4 +30,18 @@
 
 .collapseOpen {
     display: block;
+}
+
+.collapseOpen p {
+    margin: 0;
+}
+
+.dropdownArrow {
+    position: absolute;
+    right: 7px;
+    top: 8px;
+}
+
+.dropdownArrow.collapseOpen {
+    transform: rotate(180deg);
 }

@@ -1,0 +1,22 @@
+.Host {
+  display: flex;
+  align-items: center;
+  align-self: end;
+}
+
+.Host .name {
+  width: min-content;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #ff6060;
+  font-size: 18px;
+  margin: 0;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.Host .host-picture {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
