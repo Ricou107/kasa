@@ -14,7 +14,7 @@
   font-weight: 500;
 }
 
-.banner p {
+.banner .banner-title {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -25,11 +25,52 @@
 }
 
 @media only screen and (min-width: 800px) {
-  .banner p {
+  .banner .banner-title  {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 35px;
     text-align: center;
   }
+}
+
+.carousel {
+  position: relative;
+}
+
+.leftArrow {
+  position: absolute;
+  left: 3px;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 3px;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .leftArrow {
+    top: 50%;
+    transform: scale(0.7) translateY(-50%);
+  }
+
+  .rightArrow {
+    top: 50%;
+    transform: scale(0.7) translateY(-50%);
+  }
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

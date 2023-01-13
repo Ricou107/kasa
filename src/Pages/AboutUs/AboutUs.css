@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.about-us img {
+.about-us .banner img {
   margin-bottom: 20px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .about-us img {
+    .about-us .banner img {
         min-height: 200px;
     }
 }

@@ -9,12 +9,11 @@ import "./Accommodation.css"
 function Accommodation() {
 	let { id } = useParams(); 
 	const accommodation = data.find((acco) => acco.id === id );
-	console.log(accommodation)
 
 	return <div className='accommodation'>
 		{accommodation ? 
 		<div>
-			<Banner img={accommodation.cover}/> 
+			<Banner img={accommodation.pictures}/> 
 			<Description accommodation={accommodation}/>
 			<div className="dropdowns">
 				<Collapse title={'Description'} text={accommodation.description} />
