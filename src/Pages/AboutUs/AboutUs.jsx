@@ -1,11 +1,15 @@
 import Banner from "../../Components/Banner/Banner";
 import img from "../../Assets/about-us.png";
+import imgMobile from "../../Assets/about-us-mobile.png";
 import Collapse from "../../Components/Collapse/Collapse";
+import useWindowDimensions from '../../Scripts/windowSize';
 import "./AboutUs.css"
 
 function AboutUs() {
+	const { width } = useWindowDimensions();
+
 	return <div className='about-us'>
-		<Banner img={img} />
+		{(width > 600) ? <Banner img={img} /> : <Banner img={imgMobile} /> }
 		<Collapse title={'Fiabilité'} text={'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.'} />
 		<Collapse title={'Respect'} text={'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.'} />
 		<Collapse title={'Service'} text={'Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N hésitez pas à nous contacter si vous avez la moindre question.'} />

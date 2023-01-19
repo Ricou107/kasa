@@ -9,7 +9,7 @@ function Collapse({title, text}) {
 		<div className="title" onClick={() => updateOpen(!isOpen)}>{title}</div>
 		<img src={dropdownArrow} alt='dropdownArrow' className={`dropdownArrow${isOpen ? " collapseOpen" : ""}`} onClick={() => updateOpen(!isOpen)}/>
         <div className={`text${isOpen ? " collapseOpen" : ""}`}>
-			{typeof(text) === 'string' ? text : text.map((equipment) => <p>{equipment}</p>)}
+			{typeof(text) === 'string' ? text : text.map((equipment) => <p key={equipment}>{equipment}</p>)}
 		</div>
 	</section>
 }

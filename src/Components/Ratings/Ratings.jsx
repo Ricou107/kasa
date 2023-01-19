@@ -16,8 +16,8 @@ function Ratings({rating}) {
 
 	return (
 	<div className='Ratings'>
-        {ratingArray.map((isGood) => (
-            isGood ? <img src={orangeStar} alt='rating' className='orangeStar'/> : <img src={greyStar} alt='rating' className='greyStar'/>
+        {ratingArray.map((isGood, index) => (
+            isGood ? <img key={'orangeStar' + index} src={orangeStar} alt='rating' className='orangeStar'/> : <img key={'greyStar' + index} src={greyStar} alt='rating' className='greyStar'/>
         ))}
 	</div>
 	)

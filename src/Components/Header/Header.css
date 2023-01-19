@@ -11,6 +11,10 @@
     max-width: 45%;
 }
 
+.header-logo-mobile {
+  max-width: 30%;
+}
+
 .header-navbar {
   display: flex;
   align-items: center;
